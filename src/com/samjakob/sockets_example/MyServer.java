@@ -146,6 +146,10 @@ public class MyServer {
                     ScuffedProtocol.PORT
             ));
 
+            System.out.println(
+                "Now listening on port " + ScuffedProtocol.PORT + "!"
+            );
+
             while (!serverSocket.isClosed()) {
                 try {
                     // serverSocket.accept will block execution until a
