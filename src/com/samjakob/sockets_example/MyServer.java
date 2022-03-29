@@ -97,8 +97,8 @@ class MyServerDelegate implements Runnable {
 
             } catch (IOException ex) {
                 // If we have an exception, we'll log that we failed to
-                // read data from the socket, however we'll leave the
-                // connection active.
+                // read data from the socket and allow the connection to
+                // close.
                 System.err.println("Failed to read from the socket.");
                 ex.printStackTrace();
                 break;
@@ -106,7 +106,8 @@ class MyServerDelegate implements Runnable {
         }
 
         System.out.println(
-            "Connection closed: " + socket.getInetAddress().toString()
+            "Connection closed: " +
+            socket.getRemoteSocketAddress().toString()
         );
 
     }

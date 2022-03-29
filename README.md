@@ -2,6 +2,8 @@
 This is an example project demonstrating how to communicate between a Java
 server and client with a TCP socket.
 
+This example is compatible with my [PythonTCPSocketsExample](https://github.com/SamJakob/PythonTCPSocketsExample).
+
 This is written and tested with Java 16, however if you're using an older Java
 version the only necessary change should be replacing use of `var` in the code
 with the data type (i.e., the class name).
